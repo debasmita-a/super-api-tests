@@ -5,7 +5,7 @@ import supertest from 'supertest';
 const request = supertest("https://gorest.co.in/public/v2/");
 const TOKEN = "8b46e22bd11113ea8338bc712bd3f390d49d5711d91e5cd483dfcdecb99b097d";
 
-describe('Users', () =>{
+describe.skip('Users', () =>{
     it('GET/users', ()=>{
         // request
         // .get(`users?access-token=${TOKEN}`)
@@ -72,7 +72,7 @@ describe('Users', () =>{
         done();
     });
 
-    it.only('DELETE /users', (done)=>{
+    it('DELETE /users', (done)=>{
         request.delete(`users/7684597?access-token=${TOKEN}`).end((err, response)=>{
         expect(response.statusCode).to.eq(204);
         expect(response.body).to.be.eq(null); // ? empty

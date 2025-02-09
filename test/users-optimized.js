@@ -2,9 +2,7 @@ import { expect } from "chai";
 import { describe, it } from "mocha";
 import supertest from "supertest";
 
-const request = supertest("https://gorest.co.in/public/v2/");
-const TOKEN =
-  "8b46e22bd11113ea8338bc712bd3f390d49d5711d91e5cd483dfcdecb99b097d";
+
 
 describe("Users", () => {
   let userId;
